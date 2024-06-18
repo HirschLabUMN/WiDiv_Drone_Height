@@ -1,1 +1,9 @@
-# WiDiv_Drone_Height
+# Temporally resolved growth patterns and environmental responsiveness in maize using unmanned aerial vehicles
+
+## This study used plant heights extracted from UAV images to evaluate growth patterns and environmental responsiveness in maize
+
+Matlab_scripts is a folder containing scripts used in MATLAB R2020a for plant height extraction. The scripts used directly for extracting heights (AvgPHTwGroundBins.m for the average plot value and AvgPHTwGroundBins_allplotvalues.m for all of the height values within a plot) are in this folder. This folder also includes the script for sub-setting the entire geotiff into the plot of interest (PHT_PlotSubset.m) which is called on by the other scripts and never used independently and the scripts used to submit all of the iterations needed to run these scripts. 
+
+Widiv_Analysis.Rmd is an Rmarkdown document that contains all R scripts and bash scripts used in the analysis of the plant height data. This is split into 4 sections based on function and analysis location. These four sections are as follows: 1 - Scripts for manipulation of raw data on local computer before any GWAS analysis; 2 - Scripts to run GWAS analysis on supercomputer; 3 - Analysis of GWAS results on supercomputer; 4 - Local scripts for visualization of GWAS results.
+
+Raw_Data is a folder that contains all raw data by year including extracted plant height data, GCP coordinate locations, manual plant height measurements, stand count data, and weather data. The All folder within this folder contains other raw data used for analysis such as the B73 gene functional annotation (version 4), the days to flowering and heterotic group for each genotype in this study, a list of the identifiers used for iterations when running jobs, the number of bases for each maize chromosome, and the genotype planted in each plot. This folder additionally holds the loess curve of canopy cover data used for all canopy cover analysis. 
